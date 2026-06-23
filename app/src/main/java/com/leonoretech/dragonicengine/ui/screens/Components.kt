@@ -62,6 +62,7 @@ fun ToggleRow(setting: ToggleSetting, onResult: (String) -> Unit) {
                     busy = false
                     onResult("${setting.label}: ${if (result.success) "OK" else "FAILED — ${result.output}"}")
                     if (!result.success) checked = !value
+                             }
                 },
                 colors = SwitchDefaults.colors(checkedThumbColor = NeonCyan, checkedTrackColor = NeonCyan.copy(alpha = 0.4f))
             )
